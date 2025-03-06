@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPlus LK Splash Screen</title>
+    <link rel="stylesheet" href="../css/splashscreen.css">
+    <link rel="icon" href="../imges/favicon-32x32.png" type="image/x-icon" />
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="../images/background video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <div class="logo">
+            <img src="../images/logo.png" alt="EcoPlus LK Logo">
+        </div>
+        <h1>EcoPlus LK</h1>
+        <h2>Our Mission</h2>
+        <p>Protect and Promote Biodiversity in Your Local Community</p>
+        <div class="names">
+            <span>Binula - 20230883</span> | <span>Devinda - 20232901</span> | <span>Chinthaka - 20232844</span> | <span>Wishwa - 20232862</span>
+        </div>
+        <div class="blobs">
+            <div class="blob-center"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+        </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+        </defs>
+    </svg>
+    <div class="transition-overlay"></div>
+    <script src="../js/splashscreen.js"></script>
+</body>
+</html>
