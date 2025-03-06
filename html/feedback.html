@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/feedback.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<section class="home">
+    <header>
+        <div class="containerhead">
+            <nav>
+                <a href="splash screen.html"><img src="../images/logo.png" alt="logo" class="logo"></a>
+    
+                <ul>
+                    <li><a href="../html/home.html">Home</a></li>
+                    <li><a href="../html/content.html">Content</a></li>
+                    <li><a href="../html/shop.html">Shop</a></li>
+                    <li><a href="../html/gallery.html">Gallery</a></li>
+                    <li><a href="../html/userprofile.html">User Profile</a></li>
+                    <li><a href="../html/sitemap.html">Site Map</a></li>
+                    <li><a href="../html/team.html">Team</a></li>
+                    <li>
+                        <a href="#other">Others</a>
+                       
+                            <ul class="dropdown">
+                                <li><a href="../html/feedback.html">Feedbck</a></li>
+                                <li><a href="../html/event.html">Event</a></li>
+                                <li><a href="../html/blog.html">Blog</a></li>
+                                <li><a href="../html/quiz.html">Quiz</a></li>
+                                <li><a href="../html/contact.html">Contact</a></li>
+                            </ul>
+                          
+                    </li>
+                </ul>
+            </nav>
+            <hr>
+        </div>
+    </header>
+<body>
+    <div class="container">
+        <form id="feedbackForm">
+            <h2>Feedback form</h2>
+            <p class="required">Required fields *</p>
+            <label for="name">Enter your name: <span class="required">*</span></label>
+            <input type="text" id="name" name="name" required class="txtbox">
+            
+            <label for="email">Enter your email: <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required class="txtbox">
+            
+            <label>Was this your first time visiting? <span class="required">*</span></label>
+            <div class="radio-group">
+                <input type="radio" id="firstTimeYes" name="firstTime" value="yes" required>
+                <label for="firstTimeYes">Yes</label>
+                <input type="radio" id="firstTimeNo" name="firstTime" value="no" required>
+                <label for="firstTimeNo">No</label>
+            </div>
+            
+            <label>Was this website informative and easy to navigate through? <span class="required">*</span></label>
+            <div class="radio-group">
+                <input type="radio" id="informativeYes" name="informative" value="yes" required>
+                <label for="informativeYes">Yes</label>
+                <input type="radio" id="informativeNo" name="informative" value="no" required>
+                <label for="informativeNo">No</label>
+            </div>
+            
+            <label for="improvements">If "No", suggest any improvements for the future:</label>
+            <textarea id="improvements" name="improvements" class="txtbox"></textarea>
+            
+            <label for="satisfaction">How satisfied are you with our services? Choose from 0 to 10, with 1 being "Not satisfied at all!" and 10 being "Extremely satisfied!" <span class="required">*</span></label>
+            <div class="radio-group">
+                <input type="radio" id="satisfaction1" name="satisfaction" value="1" required>
+                <label for="satisfaction1">1</label>
+                <input type="radio" id="satisfaction2" name="satisfaction" value="2" required>
+                <label for="satisfaction2">2</label>
+                <input type="radio" id="satisfaction3" name="satisfaction" value="3" required>
+                <label for="satisfaction3">3</label>
+                <input type="radio" id="satisfaction4" name="satisfaction" value="4" required>
+                <label for="satisfaction4">4</label>
+                <input type="radio" id="satisfaction5" name="satisfaction" value="5" required>
+                <label for="satisfaction5">5</label>
+                <input type="radio" id="satisfaction6" name="satisfaction" value="6" required>
+                <label for="satisfaction6">6</label>
+                <input type="radio" id="satisfaction7" name="satisfaction" value="7" required>
+                <label for="satisfaction7">7</label>
+                <input type="radio" id="satisfaction8" name="satisfaction" value="8" required>
+                <label for="satisfaction8">8</label>
+                <input type="radio" id="satisfaction9" name="satisfaction" value="9" required>
+                <label for="satisfaction9">9</label>
+                <input type="radio" id="satisfaction10" name="satisfaction" value="10" required>
+                <label for="satisfaction10">10</label>
+            </div>
+
+            <label for="starRating">Rate our Web services:</label>
+            <div class="star-rating" id="starRating">
+                <input type="radio" name="stars" id="star1" value="5"><label for="star1">&#9733;</label>
+                <input type="radio" name="stars" id="star2" value="4"><label for="star2">&#9733;</label>
+                <input type="radio" name="stars" id="star3" value="3"><label for="star3">&#9733;</label>
+                <input type="radio" name="stars" id="star4" value="2"><label for="star4">&#9733;</label>
+                <input type="radio" name="stars" id="star5" value="1"><label for="star5">&#9733;</label>
+            </div>
+            
+            <label>Would you recommend our services? <span class="required">*</span></label>
+            <div class="radio-group">
+                <input type="radio" id="recommendYes" name="recommend" value="yes" required>
+                <label for="recommendYes">Yes</label>
+                <input type="radio" id="recommendNo" name="recommend" value="no" required>
+                <label for="recommendNo">No</label>
+            </div>
+            
+            <label for="updates">Would you like to receive updates about the website and any offers? <span class="required">*</span></label>
+            <select id="updates" name="updates" required>
+                <option value="yes">Yes - via Email</option>
+                <option value="no">No</option>
+            </select>
+            
+            <label for="additionalRequests">Do you have any additional questions or requests?</label>
+            <textarea id="additionalRequests" name="additionalRequests" class="txtbox"></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+        <div id="confirmationMessage" class="hidden">Thank you for your feedback!</div>
+    </div>
+
+    <br><br>
+    
+  <!-- footer -->
+
+  <footer class="footr">
+    <div class="footr-container">
+      <div class="footr-row">
+        <div class="footr-col">
+          <h4>Menu</h4>
+          <ul class="nav-links">
+            <li><a href="../html/home.html">Home</a></li>
+            <li><a href="../html/content.html">Content</a></li>
+            <li><a href="../html/shop.html">Shop</a></li>
+            <li><a href="../html/gallery.html">Gallery</a></li>
+            <li><a href="../html/sitemap.html">Site Map </a></li>
+            <li><a href="../html/team.html">Team</a></li>
+          </ul>
+
+          <a href=""
+            ><img class="footr-logo" src="../images/logo.png" alt="logo"
+          /></a>
+        </div>
+        <div class="footr-col">
+          <h4>Contact Us</h4>
+          <ul class="contact-us">
+            <li>
+              Visit: 126/3B, Galle Road, Colombo 04,<br />
+              Sri Lanka
+            </li>
+            <li>
+              Mail to us:
+              <a href="mailto:info@ecopluslk.com">info@ecopluslk.com</a>
+            </li>
+            <li>Phone:+94 112 345 678</li>
+          </ul>
+          <div class="copyright">
+            <p class="footr-copy-right">
+              Eco Plus LK © 2023, All right reserved.
+            </p>
+          </div>
+        </div>
+
+        <div class="footr-col">
+          <h4>Follow Us On</h4>
+          <div class="social-icons">
+            <a href="www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="www.twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <script src="../js/feedback.js"></script>
+
+
+</body>
+</html>

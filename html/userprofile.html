@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>                 <!-- set the title of webpage -->
+    <!-- Call the CSS style sheet to make styles -->
+    <link rel="stylesheet" href="../css/userprofile.css">
+    <link rel="icon" href="../imges/favicon-32x32.png" type="image/x-icon" />
+</head>
+<body>
+    <!-- Navigation Panel -->
+<section class="home">
+    <header>
+        <div class="container">
+          <nav>
+            <a href="../html/splashscreen.html"><img src="../images/logo.png" alt="logo" class="logo"/></a>
+
+            <ul>
+              <li><a href="../html/home.html">Home</a></li>
+              <li><a href="../html/content.html">Content</a></li>
+              <li><a href="../html/shop.html">Shop</a></li>
+              <li><a href="../html/gallery.html">Gallery</a></li>
+              <li><a href="../html/userprofile.html">User Profile</a></li>
+              <li><a href="../html/sitemap.html">Stie Map</a></li>
+              <li><a href="../html/team.html">Team</a></li>
+              <li>
+                <a href="#other">Others</a>
+
+                <ul class="dropdown">
+                  <li><a href="../html/feedback.html">Feedbck</a></li>
+                  <li><a href="../html/event.html">Event</a></li>
+                  <li><a href="../html/blog.html">Blog</a></li>
+                  <li><a href="../html/quiz.html">Quiz</a></li>
+                  <li><a href="../html/content.html">Contact</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <hr />
+        </div>
+      </header>
+    <div class="profile-container">
+        <h2>Profile Details</h2>
+        <div class="progress-bar">            <!-- create a class for progress bar control -->
+            <div class="progress" id="progress"></div>
+            <span class="progress-percentage" id="progress-percentage">0%</span>      <!-- the percentage should be appear with the progress bar-->
+        </div>
+        <div class="prompt-container">
+            <!--get Personal Details by asking questions-->
+            <div class="prompt" id="prompt-1">
+                <p>Please enter your name?</p>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <button onclick="nextPrompt(2)">Next</button>            <!-- set a Next button to save the answer  -->
+                <button onclick="skipPrompt(2)">Skip</button>            <!-- set a Skip button to skit the current question -->
+            </div>
+            <div class="prompt" id="prompt-2">
+                <p>Please enter your age?</p>
+                <input type="number" id="age" placeholder="Enter your age" required>
+                <button onclick="prevPrompt(1)">Back</button>            <!-- set a back button to go back to the previous question -->
+                <button onclick="nextPrompt(3)">Next</button>           
+                <button onclick="skipPrompt(3)">Skip</button>
+            </div>
+            <div class="prompt" id="prompt-3">
+                <p>What's your gender?</p>
+                <input type="radio" id="gender-male" name="gender" value="Male" required>          <!-- Make a radion tag for the gender -->
+                <label for="gender-male">Male</label><br>
+                <input type="radio" id="gender-female" name="gender" value="Female" required>
+                <label for="gender-female">Female</label><br>
+                <button onclick="prevPrompt(2)">Back</button>
+                <button onclick="nextPrompt(4)">Next</button>
+                <button onclick="skipPrompt(4)">Skip</button>
+            </div>
+            <!--  Volunteering Tasks -->
+            <div class="prompt" id="prompt-4">
+                <p>In which area do you prefer to volunteer?</p>
+                <input type="text" id="volunteer-area" placeholder="Enter your answer" required>
+                <button onclick="prevPrompt(3)">Back</button>
+                <button onclick="nextPrompt(5)">Next</button>
+                <button onclick="skipPrompt(5)">Skip</button>
+            </div>
+            <div class="prompt" id="prompt-5">
+                <p>How many HOURS per week can you commit to volunteering?</p>
+                <input type="number" id="volunteer-hours" placeholder="Enter your answer" required>
+                <button onclick="prevPrompt(4)">Back</button>
+                <button onclick="nextPrompt(6)">Next</button>
+                <button onclick="skipPrompt(6)">Skip</button>
+            </div>
+            <div class="prompt" id="prompt-6">
+                <p>Do you have any previous volunteering experience? </p>
+                <input type="text" id="volunteer-experience" placeholder="Enter your answer" required>
+                <button onclick="prevPrompt(5)">Back</button>
+                <button onclick="nextPrompt(7)">Next</button>
+                <button onclick="skipPrompt(7)">Skip</button>
+            </div>
+            <div class="prompt" id="prompt-7">
+                <p>What skills or interests do you have that would be beneficial for volunteering?</p>
+                <input type="text" id="volunteer-skills" placeholder="Enter your answer" required>
+                <button onclick="prevPrompt(6)">Back</button>
+                <button onclick="nextPrompt(8)">Next</button>
+                <button onclick="skipPrompt(8)">Skip</button>
+            </div>
+            <!-- Step 3: Qualifications and Other Details -->
+            <div class="prompt" id="prompt-8">
+                <p>What's your highest level of education?</p>
+                <select id="education" required>
+                    <option value="" disabled selected>Select your education level</option>        <!-- Make a dropdown list for sect options -->
+                    <option value="scholarship">Scholarship</option>
+                    <option value="ordinary">Ordinary Level</option>
+                    <option value="advanced">Advanced Level</option>
+                </select><br>
+                <button onclick="prevPrompt(7)">Back</button>
+                <button onclick="nextPrompt(9)">Next</button>
+                <button onclick="skipPrompt(9)">Skip</button>
+            </div>
+            <div class="prompt" id="prompt-9">
+                <p>Do you have any professional experience?</p>
+                <input type="text" id="professional-experience" placeholder="Enter your answer" required>
+                <button onclick="prevPrompt(8)">Back</button>
+                <button onclick="nextPrompt(10)">Next</button>
+                <button onclick="skipPrompt(10)">Skip</button>
+            </div>
+            <div class="prompt" id="prompt-10">
+                <p>What are your hobbies?</p>
+                <input type="text" id="hobbies" placeholder="Enter your hobby" required>
+                <button onclick="prevPrompt(9)">Back</button>
+                <button onclick="nextPrompt(11)">Next</button>
+                <button onclick="skipPrompt(11)">Skip</button>
+            </div>
+            <div class="prompt" id="prompt-11">
+                <p>What environmental concerns are you passionate about?</p>
+                <input type="text" id="environmental-concerns" placeholder="Enter your answer" required>
+                <button onclick="prevPrompt(10)">Back</button>
+                <button onclick="nextPrompt(12)">Next</button>
+                <button onclick="skipPrompt(12)">Skip</button>
+            </div>
+            <div class="prompt" id="prompt-12">
+                <p>Please enter your e-mail</p>
+                <input type="text" id="contact-method" placeholder="Enter your e-mail" required>
+                <button onclick="prevPrompt(11)">Back</button>
+                <button onclick="completeProfile()">Submit</button>            <!-- Make a Submit button to prompt a feedback -->
+            </div>
+        </div>  
+        <!-- Create a div class container to hold the profile details -->
+        <div class="profile-output">
+            <p id="output-name"></p>
+            <p id="output-age"></p>
+            <p id="output-gender"></p>
+            <p id="output-volunteer-area"></p>
+            <p id="output-volunteer-hours"></p>
+            <p id="output-volunteer-experience"></p>
+            <p id="output-volunteer-skills"></p>
+            <p id="output-education"></p>
+            <p id="output-professional-experience"></p>
+            <p id="output-hobbies"></p>
+            <p id="output-environmental-concerns"></p>
+            <p id="output-contact-method"></p>
+        </div>
+    </div>
+    <!-- Link the java Script file that handles user profile -->
+    <script src="userProfile_prompt.js"></script>
+
+    <!-- footer -->
+
+    <footer class="footr">
+        <div class="footr-container">
+          <div class="footr-row">
+            <div class="footr-col">
+              <h4>Menu</h4>
+              <ul class="nav-links">
+                <li><a href="../html/home.html">Home</a></li>
+                <li><a href="../html/content.html">Content</a></li>
+                <li><a href="../html/shop.html">Shop</a></li>
+                <li><a href="../html/gallery.html">Gallery</a></li>
+                <li><a href="../html/sitemap.html">Site Map </a></li>
+                <li><a href="../html/team.html">Team</a></li>
+              </ul>
+  
+              <a href=""
+                ><img class="footr-logo" src="../images/logo.png" alt="logo"
+              /></a>
+            </div>
+            <div class="footr-col">
+              <h4>Contact Us</h4>
+              <ul class="contact-us">
+                <li>
+                  Visit: 126/3B, Galle Road, Colombo 04,<br />
+                  Sri Lanka
+                </li>
+                <li>
+                  Mail to us:
+                  <a href="mailto:info@ecopluslk.com">info@ecopluslk.com</a>
+                </li>
+                <li>Phone:+94 112 345 678</li>
+              </ul>
+              <div class="copyright">
+                <p class="footr-copy-right">
+                  Eco Plus LK © 2023, All right reserved.
+                </p>
+              </div>
+            </div>
+  
+            <div class="footr-col">
+              <h4>Follow Us On</h4>
+              <div class="social-icons">
+                <a href="www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                <a href="www.twitter.com"><i class="fab fa-twitter"></i></a>
+                <a href="www.instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+      <script src="../js/userprofile.js"></script>
+      
+</body>
+</html>

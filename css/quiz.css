@@ -1,0 +1,247 @@
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background: url(../images/hero-img.png);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* navigation sec */
+
+header {
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  hr {
+    opacity: 20%;
+  }
+  .container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0px 20px;
+  }
+  
+  nav .logo {
+    width: 100px;
+    padding-top: 5px;
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: row;
+    padding: 5px auto;
+    justify-content: space-between;
+    align-items: center;
+    position: static;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+  
+  nav ul a,
+  li {
+    display: block;
+    list-style: none;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  nav ul li:hover {
+    display: block;
+    background-color: #2e8b57;
+    border-radius: 20px;
+    padding: 5px 10px;
+    transition: background-color 0.8s;
+  }
+  
+  nav ul li {
+    position: relative;
+  }
+  
+  nav ul .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: transparent;
+    background-color: #2e8b57;
+    backdrop-filter: blur(2px);
+    padding: 0px;
+    margin: 1.5px;
+    list-style: none;
+    min-width: 160px;
+    border-radius: 20px;
+    z-index: 1000;
+  }
+  
+  nav ul .dropdown li a {
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #2e8b57;
+    transition: background-color 0.8s;
+  }
+  
+  nav ul .dropdown li a:hover {
+    background-color: #98fb98;
+  }
+  
+  nav ul li:hover .dropdown {
+    display: block;
+    left: auto;
+    right: 0;
+  }
+
+.hidden {
+    display: none;
+}
+
+.result {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#quiz-container{
+    margin-top: 50px;
+}
+.question {
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+}
+
+.options {
+    list-style: none;
+    padding: 0;
+}
+
+.option {
+    margin-bottom: 10px;
+    display: block;
+    align-items: center;
+}
+
+.option label{
+    display: block;
+    align-items: center;
+    width: 100%;
+}
+
+.option input{
+    margin-right: 10px;
+    vertical-align: middle;
+}
+#progress-container {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+    height: 10px;
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    background-color: #4caf50;
+    width: 0;
+}
+
+#next-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#next-button:hover {
+    background-color: #45a049;
+}
+
+#timer-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    position: absolute;
+    right: 300px;
+    top: 150px;
+}
+
+.timer-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+#time-remaining {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.try-again {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.try-again button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.try-again button:first-child {
+    background-color: #4caf50;
+    color: white;
+}
+
+.try-again button:first-child:hover {
+    background-color: #45a049;
+}
+
+.try-again button:last-child {
+    background-color: #f44336;
+    color: white;
+}
+
+.try-again button:last-child:hover {
+    background-color: #e53935;
+}
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .footer .footer-row {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+@media (max-width: 600px) {
+    #next-button, .try-again button {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 20px;
+    }
+    .timer-icon {
+        font-size: 30px;
+    }
+    #time-remaining {
+        font-size: 16px;
+    }
+}
